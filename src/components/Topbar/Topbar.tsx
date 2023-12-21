@@ -42,10 +42,11 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 	};
 
 	return (
-		<nav className='relative flex h-[70px] w-full shrink-0 items-center px-5 bg-dark-layer-1 text-dark-gray-7'>
+		<nav className='relative flex h-[70px] w-full shrink-0 items-center px-5 bg-gradient-to-b from-purple-700 to-black  relative text-dark-purple-7'>
 			<div className={`flex w-full items-center justify-between ${!problemPage ? "max-w-[1200px] mx-auto" : ""}`}>
-				<Link href='/' className='h-[22px] flex-1'>
-					<Image src='/logo-full.png' alt='Logo' height={120} width={80} />
+				<Link href='/' className='h-[25px] flex'>
+					<Image src='/1iste.png' alt='Logo' height={100} width={80}  />
+					<Image src='/3iste.png' alt='logo img' width={150} height={80}  style={{ marginRight: '125px' }} />
 				</Link>
 
 				{problemPage && (
@@ -74,6 +75,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 					</div>
 				)}
 
+
 				<div className='flex items-center space-x-4 flex-1 justify-end'>
 				
 					<div>
@@ -99,7 +101,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 						<div className='cursor-pointer group relative'>
 							<Image src='/avatar.png' alt='Avatar' width={30} height={30} className='rounded-full' />
 							<div
-								className='absolute top-10 left-2/4 -translate-x-2/4  mx-auto bg-dark-layer-1 text-brand-orange p-2 rounded shadow-lg 
+								className='absolute top-10 left-2/4 -translate-x-2/4  mx-auto bg-dark-gray-7 text-black p-2 rounded shadow-lg 
 								z-40 group-hover:scale-100 scale-0 
 								transition-all duration-300 ease-in-out'
 							>

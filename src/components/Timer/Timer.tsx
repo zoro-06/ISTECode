@@ -32,7 +32,7 @@ const Timer: React.FC<TimerProps> = () => {
 	return (
 		<div>
 			{showTimer ? (
-				<div className='flex items-center space-x-2 bg-dark-fill-3 p-1.5 cursor-pointer rounded hover:bg-dark-fill-2'>
+				<div className='flex items-center space-x-2 bg-white p-1.5 cursor-pointer rounded hover:white'>
 					<div>{formatTime(time)}</div>
 					<FiRefreshCcw
 						onClick={() => {
@@ -51,7 +51,7 @@ const Timer: React.FC<TimerProps> = () => {
 						viewBox='0 0 24 24'
 						width='1em'
 						height='1em'
-						fill='currentColor'
+						fill='white'
 						className='h-6 w-6'
 					>
 						<path

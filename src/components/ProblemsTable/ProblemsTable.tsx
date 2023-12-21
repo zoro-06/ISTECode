@@ -115,7 +115,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ setLoadingProblems }) => 
 };
 export default ProblemsTable;
 
-function useGetProblems(setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>) {
+function  useGetProblems(setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>) {
 	const [problems, setProblems] = useState<DBProblem[]>([]);
 
 	useEffect(() => {

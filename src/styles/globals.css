@@ -336,12 +336,12 @@ code {
 
 }
 .buttonStyleHover{
-  position: relative;
-  top: 120px;
-  left:2px;
-  right: 10px;
+  position: absolute;
+  top: 150px;
+  left:-52px;
+  height:35px;
   width:180px;
-  margin: 10px; 
+  
 
 }
 

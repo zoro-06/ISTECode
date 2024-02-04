@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Calendar from 'react-calendar'; // Replace with your actual calendar library import
+import Calendar from 'react-calendar'; 
+import ButtonProp from './ButtonProp';
 
 const MyCalendar: React.FC = () => {
   const [hoveredDate, setHoveredDate] = useState<Date | null>(null);
@@ -25,8 +26,9 @@ const MyCalendar: React.FC = () => {
         {isHovered && (
           <div className='buttonHover'>
             <div className='buttonHover_2'>
+              <ButtonProp />
                            
-            <button className='buttonStyleHover bg-brand-purple text-white position:absolute px-5 py-2 sm:px-4 rounded-md text-sm font-medium
+            <button className='buttonStyleHover bg-brand-purple text-white  rounded-md text-sm font-medium
                 hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
                 transition duration-300 ease-in-out ' >Solve Problem</button>
           

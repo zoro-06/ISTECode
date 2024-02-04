@@ -95,9 +95,9 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 						href={'/questions/q'}
 							onClick={() => setAuthModalState((prev) => ({ ...prev, isOpen: true, type: "login" }))}
 						>
-							<button className='bg-brand-purple text-white px-2 py-1 sm:px-4 rounded-md text-sm font-medium
+							<button className='bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
                 hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
-                transition duration-300 ease-in-out '>Q.O.T.W</button>
+                transition duration-300 ease-in-out '>Q.O.T.D</button>
 						</Link>
 					)}
 				    

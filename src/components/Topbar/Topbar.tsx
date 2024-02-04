@@ -83,7 +83,9 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 							href='https://echo-sync.vercel.app/'
 							target='_blank'
 							rel='noreferrer'
-							className='bg-dark-fill-3 py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2'
+							className='bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
+							hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
+							transition duration-300 ease-in-out'
 						>
 							MEET
 						</a>

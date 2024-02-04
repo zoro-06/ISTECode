@@ -16,6 +16,7 @@ export default function Home() {
 			<main className='bg-dark-layer-2 min-h-screen'>
 				<Topbar />
 				<h1
+
 					className='text-2xl text-center text-white dark:text-gray-400 font-medium
 					uppercase mt-10 mb-5'
 				>
@@ -25,6 +26,7 @@ export default function Home() {
       .start();
   }}
 />
+
 				</h1>
 				<div className='relative overflow-x-auto mx-auto px-6 pb-10'>
 					{loadingProblems && (

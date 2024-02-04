@@ -12,6 +12,8 @@ import Timer from "../Timer/Timer";
 import { useRouter } from "next/router";
 import { problems } from "@/utils/problems";
 import { Problem } from "@/utils/types/problem";
+import { BrowserRouter as Router,Route,Routes } from "react-router-dom";
+
 
 type TopbarProps = {
 	problemPage?: boolean;
@@ -86,7 +88,21 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 							<button className='bg-dark-fill-3 py-1 px-2 cursor-pointer rounded '>Sign In</button>
 						</Link>
 					)}
+					{user && (
+						
+						<Link 
+			
+						href={'/questions/q'}
+							onClick={() => setAuthModalState((prev) => ({ ...prev, isOpen: true, type: "login" }))}
+						>
+							<button className='bg-brand-purple text-white px-2 py-1 sm:px-4 rounded-md text-sm font-medium
+                hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
+                transition duration-300 ease-in-out '>Q.O.T.W</button>
+						</Link>
+					)}
+				    
 					{user && problemPage && <Timer />}
+					
 					{user && (
 						<div className='cursor-pointer group relative'>
 							<Image src='/avatar.png' alt='Avatar' width={30} height={30} className='rounded-full' />

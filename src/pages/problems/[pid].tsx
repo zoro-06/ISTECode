@@ -4,6 +4,7 @@ import useHasMounted from "@/hooks/useHasMounted";
 import { problems } from "@/utils/problems";
 import { Problem } from "@/utils/types/problem";
 import React from "react";
+import QOTW from "@/components/QOTW/QOTW";
 
 type ProblemPageProps = {
 	problem: Problem;
@@ -18,6 +19,7 @@ const ProblemPage: React.FC<ProblemPageProps> = ({ problem }) => {
 		<div>
 			<Topbar problemPage />
 			<Workspace problem={problem} />
+	
 		</div>
 	);
 };

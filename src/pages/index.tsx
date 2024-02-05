@@ -1,6 +1,7 @@
 import ProblemsTable from "@/components/ProblemsTable/ProblemsTable";
 import Topbar from "@/components/Topbar/Topbar";
 import useHasMounted from "@/hooks/useHasMounted";
+import Typewriter from 'typewriter-effect';
 
 import { useState } from "react";
 
@@ -15,11 +16,17 @@ export default function Home() {
 			<main className='bg-dark-layer-2 min-h-screen'>
 				<Topbar />
 				<h1
-					className='text-2xl text-center text-gray-700 dark:text-gray-400 font-medium
+
+					className='text-2xl text-center text-white dark:text-gray-400 font-medium
 					uppercase mt-10 mb-5'
 				>
+					<Typewriter
+  onInit={(typewriter) => {
+    typewriter.typeString('Code  Create Inspire !')
+      .start();
+  }}
+/>
 
-					&ldquo; WHERE QUALITY MATTERS &rdquo; 👇
 				</h1>
 				<div className='relative overflow-x-auto mx-auto px-6 pb-10'>
 					{loadingProblems && (

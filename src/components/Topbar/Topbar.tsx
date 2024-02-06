@@ -97,7 +97,9 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 							href='/auth'
 							onClick={() => setAuthModalState((prev) => ({ ...prev, isOpen: true, type: "login" }))}
 						>
-							<button className='bg-dark-fill-3 py-1 px-2 cursor-pointer rounded '>Sign In</button>
+							<button className='bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
+							hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
+							transition duration-300 ease-in-out'>Log In</button>
 						</Link>
 					)}
 					{user && (

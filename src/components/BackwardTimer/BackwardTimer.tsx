@@ -1,34 +1,33 @@
-import React,{ useState,useEffect}from 'react';
+import React, { useState, useEffect } from 'react';
 
 type BackwardTimerProps = {
-    
+    duration: number; 
 };
 
-const BackwardTimer=({ duration })=>{
-    const[time,setTime]=useState(duration);
-    useEffect(() =>{
-        setTimeout(() =>{
-            setTime(time-1000);
+const BackwardTimer = ({ duration }: BackwardTimerProps) => {
+    const [time, setTime] = useState(duration);
 
-        },1000)
-    },[time]);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setTime(time - 1000);
+        }, 1000);
 
-    const getFormattedTime = (milliseconds) => {
-        let total_seconds= parseInt(Math.floor(milliseconds/1000).toString());
-        let total_minutes= parseInt(Math.floor( total_seconds/60).toString());
-        let total_hours= parseInt(Math.floor( total_minutes /60).toString());
-        let days= parseInt(Math.floor(total_hours/24).toString());
-        let seconds=parseInt((total_seconds % 60).toString());
-        let minutes=parseInt((total_minutes % 60).toString());
-        let hours=parseInt((total_hours % 24).toString());
-    
-        
+        return () => clearTimeout(timer); // Clear the timer on unmount
+    }, [time]);
+
+    const getFormattedTime = (milliseconds: number) => {
+        let total_seconds = Math.floor(milliseconds / 1000);
+        let total_minutes = Math.floor(total_seconds / 60);
+        let total_hours = Math.floor(total_minutes / 60);
+        let days = Math.floor(total_hours / 24);
+        let seconds = total_seconds % 60;
+        let minutes = total_minutes % 60;
+        let hours = total_hours % 24;
+
         return `${days}:${hours}:${minutes}:${seconds}`;
     };
 
-    
-    return <div>{getFormattedTime(time)}</div>
-    
-    };
+    return <div>{getFormattedTime(time)}</div>;
+};
 
 export default BackwardTimer;

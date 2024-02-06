@@ -1,8 +1,8 @@
 import React from 'react';
-import QOTW from'@/components/QOTW/QOTW';
-import Date from '../Date/Date';
 
-import YesterdaysDate from '../Date/YesterdaysDate';
+
+
+
 import Yesterdays_2 from '../Date/Yesterdays_2';
 
 import Link from "next/link";
@@ -10,12 +10,12 @@ import { problems } from '@/mockProblems/problems';
 
 type QotwbelowpageProps = {
   problem:{
-    id: "two-sum",
-		title: "Two Sum",
-		difficulty: "Easy",
-		category: "Array",
-		order: 1,
-		videoId: "8-k1C6ehKuw",
+    id: string;
+    title: string;
+    difficulty: string;
+    category: string;
+    order: number;
+    videoId: string;
   };
     
 };

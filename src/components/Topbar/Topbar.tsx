@@ -48,7 +48,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 			<div className={`flex w-full items-center justify-between ${!problemPage ? "max-w-[1200px] mx-auto" : ""}`}>
 				<Link href='/' className='h-[25px] flex'>
 					<Image src='/1iste.png' alt='Logo' height={100} width={80}  />
-					<Image src='/3iste.png' alt='logo img' width={150} height={80}  style={{ marginRight: '300px' }} />
+					<Image src='/3iste.png' alt='logo img' width={150} height={80}  style={{ marginRight: '165px' }} />
 				</Link>
 
 				{problemPage && (

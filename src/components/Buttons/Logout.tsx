@@ -4,25 +4,15 @@ import { useSignOut } from "react-firebase-hooks/auth";
 import { FiLogOut } from "react-icons/fi";
 
 const Logout: React.FC = () => {
-    const [signOut, loading, error] = useSignOut(auth);
+	const [signOut, loading, error] = useSignOut(auth);
 
-    const handleLogout = () => {
-        signOut();
-    };
-
-    return (
-        <button 
-            className='bg-dark-fill-3 py-1.5 px-3 cursor-pointer rounded text-white'
-            style={{
-                width: '100%', // Make the button take the full width of its container
-                maxWidth: '40px', // Limit the maximum width of the button
-                boxSizing: 'border-box' // Include padding and border in the total width
-            }} 
-            onClick={handleLogout}
-        >
-            <FiLogOut />
-        </button>
-    );
+	const handleLogout = () => {
+		signOut();
+	};
+	return (
+		<button className='bg-dark-fill-3 py-1.5 px-3 cursor-pointer rounded text-white' onClick={handleLogout}>
+			<FiLogOut />
+		</button>
+	);
 };
-
 export default Logout;

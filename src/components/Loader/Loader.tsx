@@ -95,7 +95,7 @@ const Loader = () => {
       exit={{ y: '100%', opacity: 0 }}
       transition={{ duration: 2 }}
     >
-      {/* <img src={star} alt="Wibe Fashion" /> */}
+      {}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         enableBackground="new 0 0 24 24"
@@ -114,7 +114,7 @@ const Loader = () => {
         </g>
       </svg>
       <Text variants={textVariants} initial="hidden" animate="visible">
-        CSD 
+        ISTECode 
       </Text>
     </Container>
   );

@@ -44,8 +44,8 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 	};
 
 	return (
-		<nav className='relative flex h-[70px] w-full shrink-0 items-center px-5 bg-gradient-to-b from-purple-700 to-black  relative text-dark-purple-7'>
-			<div className={`flex w-full items-center justify-between ${!problemPage ? "max-w-[1200px] mx-auto" : ""}`}>
+		<nav className='relative flex h-[70px] w-full shrink-0 items-center px-500 bg-gradient-to-b from-purple-700 to-black  relative text-dark-purple-7'>
+			<div className={`flex w-full items-center justify-between ${!problemPage ? "max-w-[1000px] mx-auto" : ""}`}>
 				<Link href='/' className='h-[25px] flex'>
 					<Image src='/1iste.png' alt='Logo' height={100} width={80}  />
 					<Image src='/3iste.png' alt='logo img' width={150} height={80}  style={{ marginRight: '165px' }} />

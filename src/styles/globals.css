@@ -351,3 +351,16 @@ code {
 
 }
 
+/* CSS */
+.overlay {
+  pointer-events: none; /* Allows interaction with elements behind the overlay */
+}
+
+.overlay-content {
+  pointer-events: auto; /* Allows interaction with overlay content */
+}
+
+
+h1 {
+  padding: 80px; /* Adjust the value as needed */
+}

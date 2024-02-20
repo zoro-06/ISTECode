@@ -2,14 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 
 type ButtonPropProps = {
-    problem:{
-        id: "two-sum",
-            title: "Two Sum",
-            difficulty: "Easy",
-            category: "Array",
-            order: 1,
-            videoId: "8-k1C6ehKuw",
-      };
+ problem :{
+        id: string;
+        title: string;
+        difficulty: string;
+        category: string;
+        order: number;
+        videoId?: string;
+    };
     
 };
 

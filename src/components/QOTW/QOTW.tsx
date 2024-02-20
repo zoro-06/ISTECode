@@ -20,7 +20,7 @@ type QOTWProps = {
     category: string;
     order: number;
     videoId?: string;
-
+  };
   };
     
 

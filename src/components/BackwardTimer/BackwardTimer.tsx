@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 const MidnightTimer = () => {
     const [time, setTime] = useState(0); // Initial state set to 0
 

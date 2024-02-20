@@ -8,12 +8,12 @@ import { problems } from '@/mockProblems/problems';
 
 type QotwbelowpageProps = {
   problem:{
-    id: "two-sum",
-		title: "Two Sum",
-		difficulty: "Easy",
-		category: "Array",
-		order: 1,
-		videoId: "8-k1C6ehKuw",
+    id: string;
+	title: string;
+	difficulty: string;
+	category: string;
+	order: number;
+	videoId?: string;
   };
     
 };

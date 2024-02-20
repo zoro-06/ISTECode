@@ -1,9 +1,11 @@
+
 import { useEffect, useState } from "react";
 import ProblemsTable from "@/components/ProblemsTable/ProblemsTable";
 import Topbar from "@/components/Topbar/Topbar";
 import useHasMounted from "@/hooks/useHasMounted";
 import Typewriter from 'typewriter-effect';
-import LandingPage from "@/components/LandingPage/LandingPage";
+
+import { PC } from "@/components/PC/PC";
 
 import { auth } from "@/firebase/firebase"; 
 
@@ -26,7 +28,9 @@ export default function Home() {
         <>
             <main className='bg-dark-layer-2 min-h-screen'>
                 <Topbar />
-                {} {/* Show landing page only if user is not logged in */}
+
+                {!user &&   <PC />} {/* Show landing page only if user is not logged in */}
+
                 {user && (
                     <>
                         <h1 className='text-2xl text-center text-white dark:text-gray-400 font-medium uppercase mt-10 mb-5'>
@@ -86,4 +90,5 @@ const LoadingSkeleton = () => {
             <span className='sr-only'>Loading...</span>
         </div>
     );
+
 };

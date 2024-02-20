@@ -47,7 +47,8 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ setLoadingProblems }) => 
 					return (
 						<tr className={`${idx % 2 == 1 ? "bg-dark-layer-1" : ""}`} key={problem.id}>
 							<th className='px-2 py-4 font-medium whitespace-nowrap text-dark-green-s'>
-								{solvedProblems.includes(problem.id) && <BsCheckCircle fontSize={"18"} width='18' />}
+							{solvedProblems && solvedProblems.includes(problem.id) && <BsCheckCircle fontSize={"18"} width='18' />}
+
 							</th>
 							<td className='px-6 py-4'>
 								{problem.link ? (
@@ -115,7 +116,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ setLoadingProblems }) => 
 };
 export default ProblemsTable;
 
-function useGetProblems(setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>) {
+function  useGetProblems(setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>) {
 	const [problems, setProblems] = useState<DBProblem[]>([]);
 
 	useEffect(() => {

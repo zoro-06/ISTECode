@@ -1,27 +1,38 @@
 import React from 'react';
-import Split from 'react-split';
-import Topbar from "@/components/Topbar/Topbar";
-import Timer from "../Timer/Timer";
-import BackwardTimer from '../BackwardTimer/BackwardTimer';
-import Date from '../Date/Date';
-import ProblemDescription from '../Workspace/ProblemDescription/ProblemDescription';
-import { Problem } from "@/utils/types/problem";
+import Topbar from '@/components/Topbar/Topbar';
+import MyCalendar from '@/components/Calendar/MyCalendar';
+import Qotwbelowpage from '@/components/Qotwbelowpage/Qotwbelowpage';
+import { problems } from '@/mockProblems/problems';
 
-type QOTWpageProps = {
-    
+type ExpectedProblemType = {
+    id: string;
+	title: string;
+	difficulty: string;
+	category: string;
+	order: number;
+	videoId: string;
 };
 
-const QOTWpage:React.FC<QOTWpageProps> = () => {
-    
-    return <div><div className='bg-gradient-to-b from-purple-700 to-black text-white px-20 py-10 sm:px-4 bg-dark-gray-1 to-black rounded-md text-white'> 
-    <Date />
-    
-    <button className ='bg-brand-purple text-white px-2 py-1 sm:px-4 rounded-md text-sm font-medium
-            hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
-            transition duration-300 ease-in-out type:_blank'  style={buttonStyle} > 
-    Solve Problem
-    </button>
-    </div>
-    </div>
-}
-export default QOTWpage;
+type ProblemPageProps = {
+    problem: ExpectedProblemType;
+};
+
+const ProblemPage: React.FC = () => {
+    const expectedProblem: ExpectedProblemType = {
+        id: "reverse-linked-list",
+		title: "Reverse Linked List",
+		difficulty: "Hard",
+		category: "Linked List",
+		order: 2,
+		videoId: "",
+    };
+
+    return (
+        <div>
+           
+            <Qotwbelowpage problem={expectedProblem} />
+        </div>
+    );
+};
+
+export default ProblemPage;

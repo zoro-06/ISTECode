@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 /* RESET */
+
+
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -495,6 +501,7 @@ code {
 
 }
 
+
 .buttonName
 {
   position:relative;
@@ -512,3 +519,18 @@ code {
 
 
 }
+
+/* CSS */
+.overlay {
+  pointer-events: none; /* Allows interaction with elements behind the overlay */
+}
+
+.overlay-content {
+  pointer-events: auto; /* Allows interaction with overlay content */
+}
+
+
+h1 {
+  padding: 80px; /* Adjust the value as needed */
+}
+

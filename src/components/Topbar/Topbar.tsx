@@ -44,11 +44,11 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 	};
 
 	return (
-		<nav className='relative flex h-[70px] w-full shrink-0 items-center px-5 bg-gradient-to-b from-purple-700 to-black  relative text-dark-purple-7'>
-			<div className={`flex w-full items-center justify-between ${!problemPage ? "max-w-[1200px] mx-auto" : ""}`}>
+		<nav className='relative flex h-[70px] w-full shrink-0 items-center px-500 bg-gradient-to-b from-purple-700 to-black  relative text-dark-purple-7'>
+			<div className={`flex w-full items-center justify-between ${!problemPage ? "max-w-[1000px] mx-auto" : ""}`}>
 				<Link href='/' className='h-[25px] flex'>
 					<Image src='/1iste.png' alt='Logo' height={100} width={80}  />
-					<Image src='/3iste.png' alt='logo img' width={150} height={80}  style={{ marginRight: '125px' }} />
+					<Image src='/3iste.png' alt='logo img' width={150} height={80}  style={{ marginRight: '165px' }} />
 				</Link>
 
 				{problemPage && (
@@ -79,13 +79,27 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 
 
 				<div className='flex items-center space-x-4 flex-1 justify-end'>
-					
+				
+					<div>
+						<a
+							href='https://echo-sync.vercel.app/'
+							target='_blank'
+							rel='noreferrer'
+							className='bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
+							hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
+							transition duration-300 ease-in-out'
+						>
+							MEET
+						</a>
+					</div>
 					{!user && (
 						<Link
 							href='/auth'
 							onClick={() => setAuthModalState((prev) => ({ ...prev, isOpen: true, type: "login" }))}
 						>
-							<button className='bg-dark-fill-3 py-1 px-2 cursor-pointer rounded '>Sign In</button>
+							<button className='bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
+							hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
+							transition duration-300 ease-in-out'>Login</button>
 						</Link>
 					)}
 					{user && (

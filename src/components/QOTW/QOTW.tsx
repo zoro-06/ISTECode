@@ -11,23 +11,20 @@ import { problems } from '@/mockProblems/problems';
 
 
 type QOTWProps = {
-	_solved: boolean;
-  problem:{
-    id: "two-sum",
-		title: "Two Sum",
-		difficulty: "Easy",
-		category: "Array",
-		order: 1,
-		videoId: "8-k1C6ehKuw",
-  };
+
+  
+  problem: {
+    id: string;
+    title: string;
+    difficulty: string;
+    category: string;
+    order: number;
+    videoId?: string;
+
   };
     
 
-  const buttonStyle: React.CSSProperties = {
-    position: 'relative',
-    margin: '6px', 
-  };
-  
+ 
 
 const QOTW:React.FC<QOTWProps> = ({problem}) => {
     
@@ -40,8 +37,8 @@ const QOTW:React.FC<QOTWProps> = ({problem}) => {
 
         
         <BackwardTimer 
-        style={buttonStyle}
-        duration={24*60*60*1000}  />
+       
+          />
         
         <div className='custom_1 bg-gradient-to-b from-purple-700 to-black text-white px-20 py-10 sm:px-4 bg-dark-gray-1 to-black rounded-md text-white'> 
         <Date/>

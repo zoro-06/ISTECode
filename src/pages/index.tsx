@@ -8,28 +8,43 @@ import Typewriter from 'typewriter-effect';
 import { PC } from "@/components/PC/PC";
 
 import { auth } from "@/firebase/firebase"; 
+import Loader from "@/components/Loader/Loader";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
     const [loadingProblems, setLoadingProblems] = useState(true);
     const [user, setUser] = useState(null);
     const hasMounted = useHasMounted();
-    type user = any // unresolved Bit contoversial lets see after wards Shivam
+
     useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged((user: user | null) => {
+        const unsubscribe = auth.onAuthStateChanged((user:any) => {
             setUser(user);
         });
 
         return () => unsubscribe();
     }, []);
 
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoaded(true);
+        }, 3000);
+    }, []);
+
     if (!hasMounted) return null;
 
     return (
         <>
+            <Topbar />
             <main className='bg-dark-layer-2 min-h-screen'>
-                <Topbar />
 
-                {!user &&   <PC />} {/* Show landing page only if user is not logged in */}
+                
+                <AnimatePresence>
+                {!user && !loaded && <Loader />} {/* Show loader if user is not logged in */}
+                </AnimatePresence>
+                {!user && <AnimatePresence>{loaded && <PC />}</AnimatePresence>}
+
 
                 {user && (
                     <>

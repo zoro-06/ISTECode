@@ -27,9 +27,9 @@ const ProblemPage:React.FC<ProblemPageProps> = () => {
             <div>
         <Topbar />
       <MyCalendar/>
-        <QOTW problem={problems[0]}/>
-        <Qotwbelowpage problem={problems[1]}/>
-        <Qotwbelowpage_2 problem={problems[2]}/>
+        <QOTW problem={problems[1]}/>
+        <Qotwbelowpage problem={problems[0]}/>
+        <Qotwbelowpage_2 problem={problems[9]}/>
         
         </div>
 

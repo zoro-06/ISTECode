@@ -34,7 +34,7 @@ const Qotwbelowpage:React.FC<QotwbelowpageProps> = ({problem}) => {
                 
                 <div className='custom_1 bg-gradient-to-b from-purple-700 to-black text-white px-20 py-10 sm:px-4 bg-dark-gray-1 to-black rounded-md text-white'> 
                 <YesterdaysDate/>
-                <div className="hover:text-blue-600 cursor pointer absolute text-center text-lg ml-20" >
+                <div className="titlename hover:text-blue-600 cursor pointer absolute text-center text-lg ml-20" >
                   {problem.title}
                 </div>
                 <button className ='buttonStyle bg-brand-purple text-white  position:absolute top:100px  px-100 py-3 sm:px-4 rounded-md text-sm font-medium

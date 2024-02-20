@@ -318,8 +318,8 @@ code {
   position: relative;
   top: 10px;
   left: 50px;
-  height: 280px;
-  width: 250px;
+  height: 250px;
+  width: 235px;
   transform: translateX(-50%);
   background-color: gray;
   border: 2px solid purple;
@@ -330,14 +330,164 @@ code {
 }
 .buttonHover_2{
   position:absolute;
-  top:40px;
+  top:30px;
   height:100px;
   width:50px;
 
 }
 .buttonStyleHover{
+  position: relative;
+  top: 65px;
+  left:-52px;
+  height:35px;
+  width:180px;
+  
+
+}
+.HoverDisplay
+{
+  font-size: larger;
+  left:20px;
+  
+}
+.buttonName
+{
+  position:relative;
+  width:150px;
+  height:40px;
+  left: -44px;
+ 
+}
+.difficultyStyle
+{ 
+  position: relative;
+  margin-left: 10px;
+  margin-top: 62px;
+  font-size: medium;
+}
+/*-----------Calendar------*/
+.calendarStyle
+{position:relative;
+  border-radius:95%;
+  background-color:transparent;
+  left:0px;
+  top:0px;
+}
+.titlename{
+  display: flex;
+  position:absolute;
+  margin-bottom: 10px;
+  margin-left:10px;
+}
+
+/*------------------------------------------Phone-------------------------*/
+@media (max-width: 640px) 
+{
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  /*QOTW COMPONENT*/
+.custom {
+  display: flex;
+  position: relative;
+  top: 50px;
+  right: 0px;
+  left:15px;
+  width: 350px;
+  height: 189px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid purple;
+  border-radius: 20px;
+  background-color: #808080;
+}
+.custom_1{
+  display: flex;
+  position:absolute;
+  top:50px;
+  height:124px;
+  width:290px;
+}
+.buttonStyle{
+  display: flex;
+  position: relative;
+  top: 30px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  height: 32px;
+  width:180px;
+  margin: 0px; 
+}
+.titlename{
+  display: flex;
+  position:absolute;
+  margin-bottom: 10px;
+  margin-left:00px;
+}
+.diffStyle{
   position: absolute;
-  top: 150px;
+  top:100px;
+  left:116px;
+
+}
+
+.custom_second{
+  display: flex;
+  position: relative;
+  top: 90px;
+  right: -15px;
+  width: 350px;
+  height: 185px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid purple;
+  border-radius: 20px;
+  background-color: #808080;
+
+}
+.custom_third{
+  display: flex;
+  position: relative;
+  top: 130px;
+  right: -15px;
+  width: 350px;
+  height: 185px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid purple;
+  border-radius: 20px;
+  background-color: #808080;
+
+}
+
+/*----------------------CalendarButton---------*/
+.buttonHover{
+  position: relative;
+  top: 5px;
+  left: 50px;
+  height: 220px;
+  width: 220px;
+  transform: translateX(-100%);
+  background-color: gray;
+  border: 2px solid purple;
+  padding: 60px;
+  border-radius: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+.buttonHover_2{
+  position:relative;
+  top: -25px;
+  height:100px;
+  width:50px;
+
+}
+.buttonStyleHover{
+  position: relative;
+  top: 50px;
   left:-52px;
   height:35px;
   width:180px;
@@ -345,3 +495,20 @@ code {
 
 }
 
+.buttonName
+{
+  position:relative;
+  width:180px;
+  height:40px;
+
+}
+.difficultyStyle
+{ 
+  position: relative;
+  margin-left: 10px;
+  margin-top: 52px;
+  font-size: medium;
+}
+
+
+}

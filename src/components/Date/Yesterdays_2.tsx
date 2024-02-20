@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-function getMonthName(monthNumber) {
+function getMonthName(monthNumber:number) {
   const date = new Date();
   
   date.setMonth(monthNumber - 1);
@@ -14,8 +14,9 @@ function getMonthName(monthNumber) {
 const Datetime = () => {
   var showdate = new Date();
   showdate.setDate(showdate.getDate()-2);
-  const inputStyle = {
-    width: '80px', 
+ 
+    const inputStyle: React.CSSProperties = {
+    width: '95px', 
     background: 'transparent', 
     position:'absolute',
     top:'-1px',

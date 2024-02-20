@@ -12,7 +12,8 @@ function getMonthName(monthNumber: number) {
 const Datetime = () => {
   var showdate = new Date();
   const inputStyle: React.CSSProperties = {
-    width: '80px', 
+    width: '95px', 
+
     background: 'transparent', 
     position: 'absolute',
     top: '-1px',

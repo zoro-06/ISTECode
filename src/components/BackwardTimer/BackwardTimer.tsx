@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from 'react';
 
-type BackwardTimerProps = {
-    duration: number; 
-};
 
-const BackwardTimer = ({ duration }: BackwardTimerProps) => {
-    const [time, setTime] = useState(duration);
+const MidnightTimer = () => {
+    const [time, setTime] = useState(0); // Initial state set to 0
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setTime(time - 1000);
+        const intervalId = setInterval(() => {
+            const timeUntilMidnight = getTimeUntilMidnight();
+            setTime(timeUntilMidnight);
         }, 1000);
 
-        return () => clearTimeout(timer); // Clear the timer on unmount
-    }, [time]);
+        return () => clearInterval(intervalId); // Clear the interval on unmount
+    }, []);
 
-    const getFormattedTime = (milliseconds: number) => {
+    function getTimeUntilMidnight() {
+        const now = new Date();
+        const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0); // Calculate midnight of the next day
+        return midnight.getTime() - now.getTime(); // Calculate time until midnight
+    }
+
+    function getFormattedTime(milliseconds: number) {
         let total_seconds = Math.floor(milliseconds / 1000);
         let total_minutes = Math.floor(total_seconds / 60);
         let total_hours = Math.floor(total_minutes / 60);
@@ -24,10 +28,10 @@ const BackwardTimer = ({ duration }: BackwardTimerProps) => {
         let minutes = total_minutes % 60;
         let hours = total_hours % 24;
 
-        return `${days}:${hours}:${minutes}:${seconds}`;
-    };
+        return `${hours}:${minutes}:${seconds}`;
+    }
 
     return <div>{getFormattedTime(time)}</div>;
 };
 
-export default BackwardTimer;
+export default MidnightTimer;

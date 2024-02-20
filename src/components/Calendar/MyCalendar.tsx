@@ -1,36 +1,51 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar'; 
 import ButtonProp from './ButtonProp';
+import { problems } from '@/mockProblems/problems';
 
 const MyCalendar: React.FC = () => {
   const [hoveredDate, setHoveredDate] = useState<Date | null>(null);
+  const todayDate=new Date();
+
+  const dateProblemMap: { [key: string]: number } = {};
+
+  const getProblemIdForDate = (date: Date): number => {
+    const dateString = date.toISOString().split('T')[0]; // Get date in YYYY-MM-DD format
+    if (!(dateString in dateProblemMap)) {
+      // Assign a problem ID based on the day of the month
+      dateProblemMap[dateString] = date.getDate() % problems.length;
+    }
+    return dateProblemMap[dateString];
+  };
+
 
   const tileContent = ({ date, view }: { date: Date; view: string }) => {
     const isHovered = hoveredDate && hoveredDate.toISOString() === date.toISOString();
+    const shouldHover=date<=todayDate;
+    const problemId = getProblemIdForDate(date);
+
+
+    
+
 
     return (
       <div
         style={{
           position: 'absolute',
-          cursor: 'pointer',
+          cursor: shouldHover ? 'pointer' : 'default',
+
         }}
         onMouseEnter={() => setHoveredDate(date)}
-        onMouseLeave={() => setHoveredDate(date)}
+        onMouseLeave={() => setHoveredDate(null)}
       >
-        <div className='bg-brand-purple' style={{position:'absolute',
-                                       borderRadius:'90%',
-                                       backgroundColor:'transparent',
-                                       left:'2px',
-                                       top:'2px',}}>  <p className="transparent-text">.</p></div>
+        <div className='calendarStyle bg-brand-purple' >  <p className="transparent-text">.</p></div>
 
-        {isHovered && (
+        {isHovered && shouldHover && (
           <div className='buttonHover'>
             <div className='buttonHover_2'>
-              <ButtonProp />
+              <ButtonProp problem={problems[problemId]}/>
                            
-            <button className='buttonStyleHover bg-brand-purple text-white  rounded-md text-sm font-medium
-                hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
-                transition duration-300 ease-in-out ' >Solve Problem</button>
+      
           
           </div>
           </div>

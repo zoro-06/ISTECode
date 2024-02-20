@@ -13,8 +13,11 @@ function getMonthName(monthNumber:number) {
 const Datetime = () => {
   var showdate = new Date();
   showdate.setDate(showdate.getDate()-1);
-  const inputStyle: React.CSSProperties = {
-    width: '80px', 
+
+ 
+    const inputStyle: React.CSSProperties = {
+    width: '85px', 
+
     background: 'transparent', 
     position:'absolute',
     top:'-1px',

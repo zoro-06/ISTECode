@@ -1,10 +1,12 @@
-// pages/index.js
+
 import { useEffect, useState } from "react";
 import ProblemsTable from "@/components/ProblemsTable/ProblemsTable";
 import Topbar from "@/components/Topbar/Topbar";
 import useHasMounted from "@/hooks/useHasMounted";
 import Typewriter from 'typewriter-effect';
+
 import { PC } from "@/components/PC/PC";
+
 import { auth } from "@/firebase/firebase"; 
 import Loader from "@/components/Loader/Loader";
 import { AnimatePresence } from "framer-motion";
@@ -36,11 +38,13 @@ export default function Home() {
         <>
             <Topbar />
             <main className='bg-dark-layer-2 min-h-screen'>
+
                 
                 <AnimatePresence>
                 {!user && !loaded && <Loader />} {/* Show loader if user is not logged in */}
                 </AnimatePresence>
                 {!user && <AnimatePresence>{loaded && <PC />}</AnimatePresence>}
+
 
                 {user && (
                     <>
@@ -101,4 +105,5 @@ const LoadingSkeleton = () => {
             <span className='sr-only'>Loading...</span>
         </div>
     );
+
 };

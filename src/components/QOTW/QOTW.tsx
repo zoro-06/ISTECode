@@ -17,7 +17,7 @@ type QOTWProps = {
     difficulty: string;
     category: string;
     order: number;
-    videoId: string;
+    videoId?: string;
   };
 };
 

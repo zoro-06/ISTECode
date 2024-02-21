@@ -48,7 +48,7 @@ export default function Home() {
 
                 {user && (
                     <>
-                        <h1 className='text-2xl text-center text-white dark:text-gray-400 font-medium uppercase mt-10 mb-5'>
+                        <h1 className='text-4xl text-center text-white dark:text-gray-400 font-medium uppercase mt-0'>
                             <Typewriter
                                 onInit={(typewriter) => {
                                     typewriter.typeString('Code  Create Inspire !').start();

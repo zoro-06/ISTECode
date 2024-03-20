@@ -12,7 +12,9 @@ import Timer from "../Timer/Timer";
 import { useRouter } from "next/router";
 import { problems } from "@/utils/problems";
 import { Problem } from "@/utils/types/problem";
+import Leaderboard from "../LeaderboardPage/Leaderboard";
 import { BrowserRouter as Router,Route,Routes } from "react-router-dom";
+import ProblemPage from "../QOTW/QOTWpage";
 
 
 type TopbarProps = {
@@ -76,6 +78,18 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 						</div>
 					</div>
 				)}
+				{!problemPage && user &&(
+						
+						<Link 
+			
+						href={'/Leaderboard/Leaderboard'}
+							onClick={() => setAuthModalState((prev) => ({ ...prev, isOpen: true, type: "login" }))}
+						>
+							<button className='LeaderboardStyle bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
+                hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
+                transition duration-300 ease-in-out '>Leaderboard</button>
+						</Link>
+					)}
 
 
 				<div className='flex items-center space-x-4 flex-1 justify-end'>

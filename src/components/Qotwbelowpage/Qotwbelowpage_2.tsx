@@ -1,10 +1,5 @@
 import React from 'react';
-
-
-
-
 import Yesterdays_2 from '../Date/Yesterdays_2';
-
 import Link from "next/link";
 import { problems } from '@/mockProblems/problems';
 

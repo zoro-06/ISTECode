@@ -6,4 +6,4 @@ const Userscore = () => {
   )
 }
 
-export default Userscore
+export default Userscore;

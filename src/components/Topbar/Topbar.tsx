@@ -12,7 +12,6 @@ import Timer from "../Timer/Timer";
 import { useRouter } from "next/router";
 import { problems } from "@/utils/problems";
 import { Problem } from "@/utils/types/problem";
-import Leaderboard from "../LeaderboardPage/Leaderboard";
 import { BrowserRouter as Router,Route,Routes } from "react-router-dom";
 import ProblemPage from "../QOTW/QOTWpage";
 

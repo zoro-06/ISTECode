@@ -32,6 +32,25 @@ const QOTW:React.FC<QOTWProps> = ({problem}) => {
     return  (
       
         <div className='text white '>
+
+
+<div className="efficient">
+            <div className="quote bg-purple-700 hover:bg-gray-600 hover:text-black text-center">
+                How to Code Efficiently?
+            </div>
+          </div>
+            <div className="quote bg-gray-500  hover:bg-orange-900">
+                Plan Before You Code
+            </div>
+            <div className="quote bg-gray-400  hover:bg-purple-900">
+                Write Clean and Readable Code
+            </div>
+            <div className="quote bg-gray-300  hover:bg-orange-900">
+              Test and Debug Regularly
+            </div>
+            <div className="quote bg-gray-200  hover:bg-purple-900">
+                Stay Organized and Documented
+            </div>
           
         <div className='custom' key={`${problem.id}`}>
 
@@ -58,6 +77,8 @@ const QOTW:React.FC<QOTWProps> = ({problem}) => {
          {problem.difficulty}
           </div>
         </div>
+        <span className="jt__text">Prior Questions</span>
+
         </div>
     
         </div>

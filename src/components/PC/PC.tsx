@@ -34,7 +34,7 @@ export function PC() {
           <MeshComponent />
         </Canvas>
         <div className="overlay absolute inset-0 flex justify-center items-center">
-        <div className="overlay-content bg-black bg-opacity-30 text-white p-4 rounded-lg">
+        <div className="overlay-content bg-dark-fill-3 bg-opacity-30 text-white p-4 rounded-lg">
           <h1 className ="text-6xl text-center">ISTECode</h1>
           <h2 className="text-3xl text-center">Code Create Inspire !</h2>
         </div>

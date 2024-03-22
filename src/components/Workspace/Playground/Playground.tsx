@@ -14,7 +14,7 @@ import { problems } from "@/utils/problems";
 import { useRouter } from "next/router";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import useLocalStorage from "@/hooks/useLocalStorage";
-
+//import Compiler from "../../Compiler/Compiler";
 type PlaygroundProps = {
 	problem: Problem;
 	setSuccess: React.Dispatch<React.SetStateAction<boolean>>;
@@ -118,6 +118,7 @@ const Playground: React.FC<PlaygroundProps> = ({ problem, setSuccess, setSolved 
 
 			<Split className='h-[calc(100vh-94px)]' direction='vertical' sizes={[60, 40]} minSize={60}>
 				<div className='w-full overflow-auto'>
+					
 					<CodeMirror
 						value={userCode}
 						theme={vscodeDark}

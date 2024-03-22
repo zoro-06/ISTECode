@@ -95,15 +95,17 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 				
 					<div>
 						<a
-							href='https://echo-sync.vercel.app/'
-							target='_blank'
-							rel='noreferrer'
-							className='bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
-							hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
-							transition duration-300 ease-in-out'
-						>
-							MEET
-						</a>
+    href='https://echo-sync.vercel.app/'
+    target='_blank'
+    rel='noreferrer'
+    className='bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
+    hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
+    transition duration-300 ease-in-out'
+    style={{ textDecoration: 'none' }} // Adding inline style to remove underline
+>
+    MEET
+</a>
+
 					</div>
 					{!user && (
 						<Link

@@ -48,7 +48,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 		<nav className='relative flex h-[70px] w-full shrink-0 items-center px-500 bg-gradient-to-b from-purple-700 to-black  relative text-dark-purple-7'>
 			<div className={`flex w-full items-center justify-between ${!problemPage ? "max-w-[1000px] mx-auto" : ""}`}>
 				<Link href='/' className='h-[25px] flex'>
-					<Image src='/1iste.png' alt='Logo' height={100} width={80}  />
+					<Image className="imageStyle"src='/1iste.png' alt='Logo' height={100} width={80}  />
 					<Image src='/3iste.png' alt='logo img' width={150} height={80}  style={{ marginRight: '165px' }} />
 				</Link>
 
@@ -62,7 +62,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 						</div>
 						<Link
 							href='/'
-							className='flex items-center gap-2 font-medium max-w-[170px] text-dark-gray-8 cursor-pointer'
+							className='flex items-center gap-2 font-medium max-w-[170px] text-dark-gray-8 cursor-pointer link'
 						>
 							<div>
 								<BsList />
@@ -98,7 +98,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
     href='https://echo-sync.vercel.app/'
     target='_blank'
     rel='noreferrer'
-    className='bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
+    className='meetStyle bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
     hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
     transition duration-300 ease-in-out'
     style={{ textDecoration: 'none' }} // Adding inline style to remove underline
@@ -112,7 +112,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 							href='/auth'
 							onClick={() => setAuthModalState((prev) => ({ ...prev, isOpen: true, type: "login" }))}
 						>
-							<button className='bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
+							<button className='loginStyle bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
 							hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
 							transition duration-300 ease-in-out'>Login</button>
 						</Link>
@@ -124,7 +124,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 						href={'/questions/q'}
 							onClick={() => setAuthModalState((prev) => ({ ...prev, isOpen: true, type: "login" }))}
 						>
-							<button className='bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
+							<button className='qotdStyle bg-brand-purple text-brand-orange px-2 py-1 sm:px-4 rounded-md text-sm font-medium
                 hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
                 transition duration-300 ease-in-out '>Q.O.T.D</button>
 						</Link>

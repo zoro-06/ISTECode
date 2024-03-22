@@ -28,7 +28,9 @@ const ButtonProp:React.FC<ButtonPropProps> = ({problem}) => {
      <button className='buttonStyleHover bg-brand-purple text-white  rounded-md text-sm font-medium
                 hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
                 transition duration-300 ease-in-out ' >
-                    <Link  href={`/problems/${problem.id}`}>
+                    <Link  href={`/problems/${problem.id}`}
+                        style={{ textDecoration: 'none' }}
+                        >
                         Solve Problem
                         </Link>
                 </button>

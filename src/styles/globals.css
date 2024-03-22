@@ -276,7 +276,7 @@ code {
 .custom_1{
   position:absolute;
   top:40px;
-  height:100px;
+  height:110px;
   width:650px;
 }
 .buttonStyle{
@@ -288,7 +288,7 @@ code {
 }
 .diffStyle{
   position: absolute;
-  top:70px;
+  top:80px;
   left:460px
 
 }
@@ -457,6 +457,10 @@ code {
     padding: 0;
     margin: 0;
   }
+  .LeaderboardStyle{
+    position: relative;
+  
+  }
   /*QOTW COMPONENT*/
 .custom {
   display: flex;
@@ -498,7 +502,7 @@ code {
 }
 .diffStyle{
   position: absolute;
-  top:100px;
+  top:110px;
   left:116px;
 
 }
@@ -599,8 +603,47 @@ h1 {
 
 /*Leaderboad*/
 .LeaderboardStyle{
-  margin-left: 230px;
+  margin-left: 440px;
 
 }
+.meetStyle{
+  position: relative;
+  margin-left: 20px;
+  margin-right: -10px;
+}
+.qotdStyle{
+  position: relative;
+  margin-left: 10px;
+  margin-right: -10px;
+}
+.loginStyle{
+  margin-left: 10px;
+  margin-right: -60px;
+}
 
+
+/* prior questions*/
+.styleText{
+  display: flex;
+  margin-left:550px;
+  font-size:xx-large;
+  color:rgb(139,0,139);
+  margin-top: -29px;
+}
+.lineStyle{
+  display: flex;
+  border-bottom: 3px solid purple; 
+  margin-left:520px;
+  margin-bottom: 40px;
+ 
+
+  width: 650px;
+}
+.link {
+  text-decoration: none; /* Remove underline */
+}
+
+.imageStyle{
+  margin-left: -80px;
+}
 

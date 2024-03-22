@@ -35,20 +35,20 @@ const QOTW:React.FC<QOTWProps> = ({problem}) => {
 
 
 <div className="efficient">
-            <div className="quote bg-purple-700 hover:bg-gray-600 hover:text-black text-center">
+            <div className="quote bg-gray-700 hover:bg-purple-900 hover:text-black text-center">
                 How to Code Efficiently?
             </div>
           </div>
-            <div className="quote bg-gray-500  hover:bg-orange-900">
+            <div className="quote bg-gray-600  hover:bg-purple-800  hover:text-black">
                 Plan Before You Code
             </div>
-            <div className="quote bg-gray-400  hover:bg-purple-900">
+            <div className="quote bg-gray-500  hover:bg-purple-700  hover:text-black">
                 Write Clean and Readable Code
             </div>
-            <div className="quote bg-gray-300  hover:bg-orange-900">
+            <div className="quote bg-gray-500  hover:bg-purple-600  hover:text-black">
               Test and Debug Regularly
             </div>
-            <div className="quote bg-gray-200  hover:bg-purple-900">
+            <div className="quote bg-gray-400  hover:bg-purple-500  hover:text-black" >
                 Stay Organized and Documented
             </div>
           
@@ -64,11 +64,13 @@ const QOTW:React.FC<QOTWProps> = ({problem}) => {
         <div className='titlename hover:text-blue-600 cursor pointer absolute text-center text-lg ml-20' >
           {problem.title}
         </div>
-        <button className ='buttonStyle bg-brand-purple text-white  position:absolute top:100px  px-100 py-3 sm:px-4 rounded-md text-sm font-medium
+        <button className ='buttonStyle  bg-brand-purple text-white  position:absolute top:100px  px-100 py-3 sm:px-4 rounded-md text-sm font-medium
                 hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
-                transition duration-300 ease-in-out type:_blank' >
+                transition duration-300 ease-in-out type:_blank '  >
                   
-                  <Link  href={`/problems/${problem.id}`}>
+                  <Link  href={`/problems/${problem.id}`}
+                      style={{  textDecoration: 'none' }}
+>
 
         Solve Problem
         </Link>
@@ -77,7 +79,7 @@ const QOTW:React.FC<QOTWProps> = ({problem}) => {
          {problem.difficulty}
           </div>
         </div>
-        <span className="jt__text">Prior Questions</span>
+        
 
         </div>
     

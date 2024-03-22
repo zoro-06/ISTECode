@@ -37,10 +37,13 @@ const Qotwbelowpage:React.FC<QotwbelowpageProps> = ({problem}) => {
                 <div className="titlename hover:text-blue-600 cursor pointer absolute text-center text-lg ml-20" >
                   {problem.title}
                 </div>
-                <button className ='buttonStyle bg-brand-purple text-white  position:absolute top:100px  px-100 py-3 sm:px-4 rounded-md text-sm font-medium
+                <button className ='buttonStyle bg-brand-purple text-brand-orange  position:absolute top:100px  px-90 py-3 sm:px-4 rounded-md text-sm font-medium
                         hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
                         transition duration-300 ease-in-out type:_blank' >
-                          <Link  href={`/problems/${problem.id}`}>
+                          <Link  href={`/problems/${problem.id}`}
+                              style={{  textDecoration: 'none' }}
+                              >
+                              
         
                 Solve Problem
                 </Link>

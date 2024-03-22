@@ -51,24 +51,49 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ setLoadingProblems }) => 
 							{solvedProblems && solvedProblems.includes(problem.id) && <BsCheckCircle fontSize={"18"} width='18' />}
 
 							</th>
-							<td className='px-6 py-4'>
+							{/*<td className='px-6 py-4'>
 								{problem.link ? (
 									<Link
 										href={problem.link}
-										className='hover:text-blue-600 cursor-pointer'
+										className='hover:text-black-600 cursor-pointer'
 										target='_blank'
+										
 									>
 										{problem.title}
 									</Link>
 								) : (
 									<Link
-										className='hover:text-purple-600 cursor-pointer'
+										className='hover:text-orange-600 cursor-pointer'
 										href={`/problems/${problem.id}`}
 									>
 										{problem.title}
 									</Link>
 								)}
-							</td>
+								</td>*/}
+								<td className=' px-2 py-4'>
+            {problem.link ? (
+                <Link
+				href={problem.link}
+                    
+					style={{ color: 'white', textDecoration: 'none' }}
+					className='hover:text-purple cursor-pointer link'
+                    target='_blank'
+                >
+                    {problem.title}
+                </Link>
+            ) : (
+                <Link
+                    
+					style={{ color: 'white', textDecoration: 'none' }}
+					className=' hover:text-purple-600 cursor-pointer link'
+                    href={`/problems/${problem.id}`}
+					target='_blank'
+				
+                >
+                    {problem.title}
+                </Link>
+            )}
+        </td>
 							<td className={`px-6 py-4 ${difficulyColor}`}>{problem.difficulty}</td>
 							<td className={"px-6 py-4"}>{problem.category}</td>
 							<td className={"px-6 py-4"}>

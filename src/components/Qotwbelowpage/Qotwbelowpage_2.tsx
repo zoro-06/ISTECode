@@ -38,7 +38,9 @@ const Qotwbelowpage:React.FC<QotwbelowpageProps> = ({problem}) => {
                 <button className ='buttonStyle bg-brand-purple text-white  position:absolute top:100px  px-100 py-3 sm:px-4 rounded-md text-sm font-medium
                         hover:text-brand-purple hover:bg-white hover:border-3 hover:border-brand-purple border-3 border-transparent
                         transition duration-300 ease-in-out type:_blank' >
-                          <Link  href={`/problems/${problem.id}`}>
+                          <Link  href={`/problems/${problem.id}`}
+                              style={{ textDecoration: 'none' }}
+                              >
         
                 Solve Problem
                 </Link>
